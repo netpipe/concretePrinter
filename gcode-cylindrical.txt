@@ -1,0 +1,10 @@
+G21 G90
+G28                    ; homes Z then R (theta assumed 0 at power-up)
+M114                   ; X Y Z | th R Z
+G0 X800 Y0 Z300
+G1 Z120 F600
+M3 S60                 ; pump on, 60% flow
+G2 X800 Y0 I-800 J0 F300   ; full circle, radius 800 mm
+G4 P2
+G0 Z400
+M5 M30
