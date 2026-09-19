@@ -1,0 +1,11 @@
+M17                 ; enable lever actuators
+G91 G1 B-1 F30      ; jog boom down onto its bed/rest (watch it!)
+G91 G1 C2 F30       ; jog knuckle to its reference mark, etc.
+G28                 ; record home -> controller now knows all joint angles
+G90
+M114                ; X Y Z | A B C D
+G0 X4000 Y0 Z4000   ; nozzle rapid, mm, origin at slew axis
+G1 Z3500 F100
+M3 S40              ; pump on at 40% flow command
+G1 X4500 F50        ; print move
+M5
