@@ -24,6 +24,9 @@
 
 #include <Arduino.h>
 #include <math.h>
+#define strtof(A, B) strtod(A, B)
+#include <stdlib.h>
+#include <stdio.h>
 
 #if !defined(__AVR__)
 #error "AVR Timer1 specific; port the ISR for other MCUs."
@@ -654,7 +657,8 @@ static uint8_t executeLine(char *line) {
         target[i] = absoluteMode ? v : posMm[i] + v;
       }
     }
-    const float PI_F = 3.14159265359f, TWO_PI = 6.28318530718f;
+    const float PI_F = 3.14159265359f;
+   // float TWO_PI = 6.28318530718f;
     float sx = posMm[0], sy = posMm[1], cx, cy, r;
     if (hasIJ) {
       cx = sx + (has['I'-'A'] ? val['I'-'A']*u : 0);
