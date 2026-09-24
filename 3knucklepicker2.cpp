@@ -20,6 +20,8 @@
  *  HOMING: jog each joint onto its mechanical reference with G91 A/B/C/D
  *  moves, then send G28 to record that position as HOME_ANGLE[].
  *  Cartesian moves are refused until homed.
+ 
+ * for automatically bringing the boom in and out while printing
  */
 
 #include <Arduino.h>

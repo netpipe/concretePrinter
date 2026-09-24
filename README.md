@@ -9,3 +9,6 @@ for 3knucklepicker
 
 **Important Hardware Calibration Step:**
 Be sure to measure exactly how many stepper motor pulses (steps) it takes to move the extension cylinder 1 millimeter, and update `COUNTS_PER_UNIT[3]` with that number!
+
+
+the 3knucklepicker2.cpp file is for automatically bringing the boom in and out during xyz movements
