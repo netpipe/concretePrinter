@@ -20,6 +20,7 @@
  *  HOMING: jog each joint onto its mechanical reference with G91 A/B/C/D
  *  moves, then send G28 to record that position as HOME_ANGLE[].
  *  Cartesian moves are refused until homed.
+ * the boom has to be manually extended then the xy coords can move untill they fail, when extending after a fail the pumps might not be on. im not sure how it works yet
  */
 
 #include <Arduino.h>

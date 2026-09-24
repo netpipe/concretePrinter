@@ -20,6 +20,8 @@
  *  HOMING: jog each joint onto its mechanical reference with G91 A/B/C/D
  *  moves, then send G28 to record that position as HOME_ANGLE[].
  *  Cartesian moves are refused until homed.
+ 
+* im not sure if the 4th leaver on this one is for a articulated hook but it might not be for the boom. but i've updated the newer versions 3knucklepicker.cpp instead
  */
 
 #include <Arduino.h>
